@@ -1,0 +1,14 @@
+repositories:
+  - name: stable
+    url: https://charts.helm.sh/stable
+
+releases:
+  - name: dev
+    chart: ./hello-chart
+    values:
+      - ./hello-values/dev.yaml
+
+  - name: stage
+    chart: ./hello-chart
+    values:
+      - ./hello-values/stage.yaml
