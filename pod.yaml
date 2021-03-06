@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-chart-pod
+spec:
+  containers:
+    - name: hello-chart-container
+      image: us-east1-docker.pkg.dev/quickstart-with-helm-030321/quickstart-helm-repo/quickstart-image:tag1 
+      imagePullPolicy: IfNotPresent
