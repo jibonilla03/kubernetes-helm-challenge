@@ -1,9 +1,9 @@
 provider "google" {
-  project     = "quickstart-with-helm-030321"
-  region      = "us-east1"
+  project     = "kubernetes-helm-challenge-jg"
+  region      = "us-east1-b"
 }
 
 provider "google-beta" {
-  project     = "quickstart-with-helm-030321"
-  region      = "us-east1"
+  project     = "kubernetes-helm-challenge-jg"
+  region      = "us-east1-b"
 }

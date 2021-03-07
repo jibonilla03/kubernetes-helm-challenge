@@ -5,7 +5,7 @@ resource "google_service_account" "default" {
 
 # Ensures that the Google Cloud Storage bucket that backs Google Container Registry exists. 
 resource "google_container_registry" "registry" {
-  project  = "quickstart-with-helm-030321"
+  project  = "kubernetes-helm-challenge-jg"
   location = "US"
 }
 
@@ -37,7 +37,7 @@ resource "google_artifact_registry_repository_iam_member" "test-iam" {
 
 resource "google_container_cluster" "primary" {
   name     = "my-gke-cluster"
-  location = "us-east1" # Autopilot - Optimized Kubernetes cluster with a hands-off experience and pay-per-pod. 
+  location = "us-east1-b" # Autopilot - Optimized Kubernetes cluster with a hands-off experience and pay-per-pod. 
 
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
@@ -49,7 +49,7 @@ resource "google_container_cluster" "primary" {
 # Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from the cluster control plane.
 resource "google_container_node_pool" "primary_preemptible_nodes" {
   name       = "my-node-pool"
-  location   = "us-east1"
+  location   = "us-east1-b"
   cluster    = google_container_cluster.primary.name
   node_count = 1
 

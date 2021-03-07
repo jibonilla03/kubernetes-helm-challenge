@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/quickstart-with-helm-030321/hello-app
+  repository: us.gcr.io/kubernetes-helm-challenge-jg/hello-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1"
