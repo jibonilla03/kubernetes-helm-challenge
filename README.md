@@ -26,15 +26,18 @@ Take the following steps to enable the Kubernetes Engine API:
 ## Use command-line tools locally
 	• Install the Cloud SDK, which includes the gcloud command-line tool.
 	• Using the gcloud command line tool, install the Kubernetes command-line tool. kubectl is used to communicate with Kubernetes, which is the cluster orchestration system of GKE    clusters:
-    ```console
+    
+    ```bash
 		gcloud components install kubectl
     ```
 	• Install Helm 3 if it is not already installed.
 	Enable Helm experimental support for OCI images with the HELM_EXPERIMENTAL_OCI variable. Add the following line to ~/.bashrc (or ~/.bash_profile in macOS, or wherever your shell stores environment variables):
+    
     ```console
 		export HELM_EXPERIMENTAL_OCI=1
     ```
 	• Run the following command to load your updated .bashrc (or .bash_profile) file:
+    
     ```console
 		source ~/.bashrc
     ```
