@@ -4,11 +4,13 @@ repositories:
 
 releases:
   - name: dev
+    namespace: dev
     chart: ./hello-chart
     values:
       - ./hello-values/dev.yaml
 
   - name: stage
+    namespace: stage
     chart: ./hello-chart
     values:
       - ./hello-values/stage.yaml
